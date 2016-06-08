@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JJTopBar">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAN-QQ-U8T" userLabel="back">
+                    <rect key="frame" x="0.0" y="20" width="176" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="mQZ-cy-CsW"/>
+                        <constraint firstAttribute="width" constant="176" id="ztx-CQ-3gF"/>
+                    </constraints>
+                    <state key="normal" image="app_tr_back_btn.png"/>
+                    <connections>
+                        <action selector="backBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="ngL-Ue-PuE"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无戒指君" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdU-EY-xxy" userLabel="title">
+                    <rect key="frame" x="88" y="20" width="424" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHG-FB-hrx" userLabel="more">
+                    <rect key="frame" x="556" y="20" width="44" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="ABx-3n-AHp"/>
+                        <constraint firstAttribute="height" constant="44" id="J1O-rV-dc2"/>
+                    </constraints>
+                    <state key="normal" image="app_tr_more.png"/>
+                    <connections>
+                        <action selector="moreBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="NFw-4T-0Fo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otC-N0-FhH" userLabel="bookmark">
+                    <rect key="frame" x="512" y="20" width="44" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="14x-TL-FkI"/>
+                        <constraint firstAttribute="width" constant="44" id="iBw-xj-Pyg"/>
+                    </constraints>
+                    <state key="normal" image="app_tr_cfg_bookmark.png"/>
+                    <connections>
+                        <action selector="bookmarkBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="BOp-vg-Sng"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="DdU-EY-xxy" secondAttribute="trailing" constant="88" id="3BM-eV-MNl"/>
+                <constraint firstItem="zAN-QQ-U8T" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="4AL-hR-xrG"/>
+                <constraint firstAttribute="bottom" secondItem="zAN-QQ-U8T" secondAttribute="bottom" id="GdS-M3-5ug"/>
+                <constraint firstItem="DdU-EY-xxy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="88" id="Mjv-Eg-lxq"/>
+                <constraint firstAttribute="bottom" secondItem="otC-N0-FhH" secondAttribute="bottom" id="N7R-bP-q1h"/>
+                <constraint firstAttribute="bottom" secondItem="yHG-FB-hrx" secondAttribute="bottom" id="RjR-4g-J1M"/>
+                <constraint firstItem="DdU-EY-xxy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="YxU-AK-Oko"/>
+                <constraint firstItem="yHG-FB-hrx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="cBI-og-XDW"/>
+                <constraint firstItem="zAN-QQ-U8T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jHP-N0-DjH"/>
+                <constraint firstAttribute="bottom" secondItem="DdU-EY-xxy" secondAttribute="bottom" id="kId-MC-If6"/>
+                <constraint firstAttribute="trailing" secondItem="yHG-FB-hrx" secondAttribute="trailing" id="qgR-fK-MEG"/>
+                <constraint firstItem="yHG-FB-hrx" firstAttribute="leading" secondItem="otC-N0-FhH" secondAttribute="trailing" id="v1b-WJ-tbb"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="DdU-EY-xxy" id="JF3-HY-bv0"/>
+            </connections>
+            <point key="canvasLocation" x="368" y="427"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="app_tr_back_btn.png" width="176" height="44"/>
+        <image name="app_tr_cfg_bookmark.png" width="44" height="44"/>
+        <image name="app_tr_more.png" width="44" height="44"/>
+    </resources>
+</document>

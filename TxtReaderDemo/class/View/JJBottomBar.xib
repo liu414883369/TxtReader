@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JJBottomBar">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epo-g6-Yye" userLabel="backView">
+                    <rect key="frame" x="0.0" y="68" width="320" height="35"/>
+                    <subviews>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uSg-uq-Nyg" customClass="JJSlider">
+                            <rect key="frame" x="18" y="0.0" width="284" height="36"/>
+                            <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="progressSliderValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="1rW-9C-aLm"/>
+                                <action selector="sliderTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="pLr-kD-H4G"/>
+                                <action selector="sliderTouchUpOutside:" destination="iN0-l3-epB" eventType="touchUpOutside" id="4fg-Sl-qbH"/>
+                            </connections>
+                        </slider>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="uSg-uq-Nyg" firstAttribute="top" secondItem="epo-g6-Yye" secondAttribute="top" id="09h-9F-o0B"/>
+                        <constraint firstItem="uSg-uq-Nyg" firstAttribute="leading" secondItem="epo-g6-Yye" secondAttribute="leading" constant="20" id="0sA-s1-M4Q"/>
+                        <constraint firstAttribute="trailing" secondItem="uSg-uq-Nyg" secondAttribute="trailing" constant="20" id="LBq-gw-5DF"/>
+                        <constraint firstAttribute="bottom" secondItem="uSg-uq-Nyg" secondAttribute="bottom" id="gqN-Dj-vjs"/>
+                        <constraint firstAttribute="height" constant="35" id="k4P-Q7-fDw"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKp-fS-oac">
+                    <rect key="frame" x="110" y="0.0" width="100" height="25"/>
+                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="jbK-mv-k2E"/>
+                        <constraint firstAttribute="width" constant="100" id="qOB-Cy-1XV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="epo-g6-Yye" secondAttribute="bottom" id="92y-Ng-xta"/>
+                <constraint firstItem="iKp-fS-oac" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Nnq-fa-gfb"/>
+                <constraint firstAttribute="trailing" secondItem="epo-g6-Yye" secondAttribute="trailing" id="cro-2T-dON"/>
+                <constraint firstItem="iKp-fS-oac" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gjf-9P-M2U"/>
+                <constraint firstItem="epo-g6-Yye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yu1-Hp-Mko"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="progressLabel" destination="iKp-fS-oac" id="nwP-xY-2jU"/>
+                <outlet property="progressSlider" destination="uSg-uq-Nyg" id="sYV-8J-HeP"/>
+            </connections>
+            <point key="canvasLocation" x="556" y="376.5"/>
+        </view>
+    </objects>
+</document>
